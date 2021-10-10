@@ -2,30 +2,28 @@
 //「もし○○ならば●●を行う」の処理のこと
 //ifの後ろに条件式を書き、それが「成り立つ」場合の処理を{ }の中に書きます。
 //if文の練習じゃなくなっちゃた
-let text = document.getElementById("text");
-let textBox = document.getElementById("textBox");
-let color = document.getElementById("color");
-let area = document.createElement("div");
-const btn = document.getElementById("btn");
-const deleteBtn = document.getElementById("deleteBtn");
-const box = document.getElementById("box");
+//createElement = htmlの要素を生成するメソッド
 
+let color = document.getElementById("color"); //#colorを取得してきて変数colorに代入しています
+let text = document.getElementById("text"); //#textを取得してきて変数textに代入しています
+let textBox = document.getElementById("textBox"); //#textBoxを取得してきて変数testBoxに代入しています
+let box = document.getElementById("box"); //#boxを取得してきて変数boxに代入しています
+let parent = document.getElementById("menueText"); //#menueTextを取得してきて変数parentに代入しています
+let area = document.createElement("h2"); //createElement()でjs内でh1を生成する動作を、変数areaに代入しています
+const btn = document.getElementById("btn"); //#btnを取得してきて変数btnに代入しています
+const deleteBtn = document.getElementById("deleteBtn"); //#deleteBtnを取得してきて変数deleteBtnに代入しています、delete単体は予約後なので使え無かったです。
+
+//btnが押された時の動作
 btn.onclick = function () {
-  let value = text.value;
-  let colorValue = color.value;
+  let textValue = text.value; //変数valueに#textのvalue値を代入しています
+  let colorValeu = color.value; //変数colorValueに#colorのvalue値を代入しています
 
-  area.id = "menueBox";
-  area.innerHTML = "追加された要素です。";
-
-  var parent = document.getElementById("menueText");
+  area.innerHTML = "createElementとappendChildで生成されたh1です";
   parent.appendChild(area);
-  let menueBox = document.getElementById("menueBox");
 
-  box.style.backgroundColor = colorValue;
-  menueBox.style.backgroundColor = colorValue;
-
+  box.style.backgroundColor = colorValeu;
   box.style.display = "block";
-  textBox.innerHTML = text.value;
+  textBox.innerHTML = textValue;
 
   // console.log(value);
   // console.log(colorValue);
