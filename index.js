@@ -9,6 +9,7 @@ let text = document.getElementById("text"); //#textを取得してきて変数te
 let textBox = document.getElementById("textBox"); //#textBoxを取得してきて変数testBoxに代入しています
 let box = document.getElementById("box"); //#boxを取得してきて変数boxに代入しています
 let parent = document.getElementById("menueText"); //#menueTextを取得してきて変数parentに代入しています
+let parent = document.getElementById("menueText"); //#menueTextを取得してきて変数parentに代入しています
 let area = document.createElement("h2"); //createElement()でjs内でh2を生成する動作を、変数areaに代入しています
 const btn = document.getElementById("btn"); //#btnを取得してきて変数btnに代入しています
 const deleteBtn = document.getElementById("deleteBtn"); //#deleteBtnを取得してきて変数deleteBtnに代入しています、delete単体は予約後なので使え無かったです。
@@ -36,3 +37,38 @@ deleteBtn.onclick = function () {
   //#boxのdisplayの値がnoneになり消えます
   box.style.display = "none";
 };
+
+// 文字列の中で「${定数}」とすることで、文字列の中に定数や変数を含めることができます。
+// この時、文字列全体をバッククォーテーション（`）で囲む必要があります。
+// また、右の図のように複数の変数や定数を埋め込むことも可能です。
+
+const ruka = "ありがとうございます！";
+console.log(`ありがとう${ruka}ございます！`);
+
+const Number = 12;
+if (Number > 10) {
+  //条件↑
+  console.log("10より大きいです");
+  //条件が成り立てば実行される↑
+}
+
+//条件式の部分を出力
+//true , false
+console.log(Number > 10); //trueです！ ←条件が成り立つ ◯
+console.log(Number < 10); //falseです！ ←条件が成り立たない ☓
+
+//大小を比べる演算子
+// a  >  b  --- aはbより小さい
+// a <=  b  --- aのほうが小さい、または等しい
+// a  >  b  --- aのほうがbより大きい
+// a >=  b  --- aのほうが大きい、または等しい
+
+//elseのコード
+let test = 12;
+if (test > 10) {
+  //条件↑
+  console.log("10より大きいです");
+  //条件が成り立てば実行される↑
+} else {
+  console.log("10より小さいです");
+}
