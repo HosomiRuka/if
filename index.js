@@ -9,7 +9,7 @@ let text = document.getElementById("text"); //#textを取得してきて変数te
 let textBox = document.getElementById("textBox"); //#textBoxを取得してきて変数testBoxに代入しています
 let box = document.getElementById("box"); //#boxを取得してきて変数boxに代入しています
 let parent = document.getElementById("menueText"); //#menueTextを取得してきて変数parentに代入しています
-let parent = document.getElementById("menueText"); //#menueTextを取得してきて変数parentに代入しています
+// let parent = document.getElementById("menueText"); //#menueTextを取得してきて変数parentに代入しています
 let area = document.createElement("h2"); //createElement()でjs内でh2を生成する動作を、変数areaに代入しています
 const btn = document.getElementById("btn"); //#btnを取得してきて変数btnに代入しています
 const deleteBtn = document.getElementById("deleteBtn"); //#deleteBtnを取得してきて変数deleteBtnに代入しています、delete単体は予約後なので使え無かったです。
@@ -71,4 +71,29 @@ if (test > 10) {
   //条件が成り立てば実行される↑
 } else {
   console.log("10より小さいです");
+}
+
+//else if
+let hosomi = 7;
+if (hosomi >= 10) {
+  console.log("留加は10より上です");
+} else if (hosomi > 5) {
+  console.log("留加は10より下です");
+} else {
+  console.log("？");
+}
+
+//複数の条件式
+let neko = 3;
+if (neko < 10 && neko > 2) {
+  console.log("猫は10より小さく2より大きい");
+}
+
+//switch文
+let singoki = "赤";
+
+switci (singoki){
+  case "赤":
+    console.log("ストップ!");
+    break;
 }
